@@ -3,67 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio Akarsha shetty</title>
+    <!-- SEO Meta Tags -->
+    <title>Akarsha Shetty's Portfolio</title>
+    <meta name="description" content="Full-stack web developer specializing
+          in React and Node.js. Available for freelance projects.">
+    <meta name="keywords" content="web developer, React, JavaScript, portfolio">
+    <meta name="author" content="Akarsha Shetty">
+ 
+    <!-- Open Graph (for Facebook, LinkedIn, WhatsApp previews) -->
+    <meta property="og:title" content="Akarsha Shetty| Web Developer">
+    <meta property="og:description" content="Check out my portfolio and projects!">
+    <meta property="og:image" content="https://Akarsha.png">
+    <meta property="og:url" content="https://Akarsha.com">
+    <meta property="og:type" content="website">
+ 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akarsha Shetty | Web Developer">
+    <meta name="twitter:description" content="Check out my portfolio!">                                                                                       
 </head>
 <body>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skill</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact</a>
-    </nav>
     <header>
-        <h1>Hi, I am Akarsha Shetty👋 </h1>
-        <p>I am passionate web developer from Bengaluru</p>
-        <a href="#hire">Hire me</a>
+        <nav>
+            <div class="logo">AKA</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="toggle dark mode" title="toggle dark">🌙</button>
+            <button class="nenu-toggle" aria-label="toggle navigation" aria-expanded="false">≡</button>
+        </nav>
     </header>
-    <section id="about">
-    <h2>About Me</h2>
-    <img src="profile pic.jpeg" alt="Profile photo of Akarsha Shetty" width="200px" height="200px">
-    <p>I love building things on the web. Currently learning HTML,CSS,JavaScript, and React</p>
-    </section>
-    <section id="skills">
+    <main>
+        <section id="hero" class="hero-section">
+            <h1>Hi, I am Akarsha Shetty👋 </h1>
+        <p>I am passionate web developer from Bengaluru</p>
+        <div class="hero-button">
+            <a href="#project">View my work</a><br>
+            <a href="#contact">Contact</a>
+        </div>     
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <figure>
+                <img src="profile pic.jpeg" alt="Profile photo of Akarsha Shetty" width="200px" height="200px">
+                <figcaption>Akarsha Shetty Web developer</figcaption>
+            </figure>
+            <p>I'm passionate web developer..</p>
+        </section>
+        <section id="skills" class="skill-section">
         <h2>My Skills</h2>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-        </ul>
+        <div class="skill-grid">
+            <div class="skill-item" data-level="90">HTML</div>
+            <div class="skill-item" data-level="80">CSS</div>
+            <div class="skill-item" data-level="75">JavaScript</div>
+            <div class="skill-item" data-level="60">React</div>
+        </div>   
     </section>
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <h2>My Projects</h2>
-        <h3>project 1</h3>
-        <p>Description of Project 1</p>
-        <a href="#view project"></a>
+        <div class="projects-grid">
+            <article class="project-card" data-category="web">
+                <img src="weather.jpg" alt="weather app" width="200px">
+                <h3>Weather App</h3>
+                <p>Real-time weather dashboard using OpenWeather API</p>
+                <div class="project_tags">
+                    <span>React</span>
+                    <span>API</span>
+                </div>
+                <a href="#">Live Demo</a>
+                <a href="#">GitHub</a>
+            </article>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email ID:<a href="mailto:25etai410013@msruas.ac.in">25etai410013@msruas.ac.in</a></p>
-        <p>Git Hub:<a href="https://github.com/akarshashetty266-lgtm">akarshashetty266-lgtm</a></p>
-        <p>LinkedIn:<a href="https://www.linkedin.com/in/akarsha-shetty-910530418?utm_source=share_via&utm_content=profile&utm_medium=member_android">Akarsha Shetty</a></p> 
-        <h2>Contact Me</h2>
-        <p>Have a project in mind? Let's talk!</p>
-        <form action="">
-            <label for="name">Your name</label>
-            <input type="text" name="name" id="name" required placeholder="enter your name"><br>
-            <label for="Email">Email id</label>
-            <input type="text" name="Email" id="Email" placeholder="enter email" required><br>
-            <label for="subject">Subject</label>
-            <select name="subject" id="subject">
-                <option value="--select value--">--select value--</option>
-            <option value="hire"> I want to hire you</option>
-            <option value="collab"> I want To collab</option>
-            <option value="others">others</option>
-            </select><br>
+    <section id="contact" class="contact-section">
+        <h2>Get in touch</h2>
+        <form action="#" method="post" novalidate></form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class=form-group>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
             <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="enter the message"></textarea><br>
-            <button type="submit">submit👍</button>
-            <button type="reset">reset</button>
-        </form>
+            <textarea name="message" id="message">enter the message</textarea>
+        </div>
+        <button>Send message</button>
+
     </section>
-    <footer>
-        <p>&copy;2026 Akarsha Shetty.All rights reserved</p>
+    </main>
+     <footer class="site-footer">
+        <p>&copy;2026 Akarsha Shetty.built with HTML and CSS ❤️</p>
+        <nav aria-label="socialmedia-links">
+        <a href="https://github.com/akarshashetty266-lgtm" target="blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/akarsha-shetty-910530418?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="blank">LinkedIn</a>
+        </nav>
+    </footer>
 </body>
-</html></footer>
+</html>                                                                          
     
